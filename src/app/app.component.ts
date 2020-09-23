@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cours-project';
+  pageDisplayed ='both'
+
+  ondisplayPage(page:{displayedPage : string}){
+    this.pageDisplayed = page.displayedPage;
+    
+  }
 }
