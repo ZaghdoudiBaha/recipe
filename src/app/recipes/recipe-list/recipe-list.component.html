@@ -1,18 +1,10 @@
-
+<button class="btn btn-success">New recipe</button>
 <div class="row">
     <div class="col-xs-12">
-        <button class="btn btn-success">New recipe</button>
-        <a class="list-group-item clear-fix" *ngFor="let recipe of recipes">
-            <div class="float-xs-left">
-                <h3 class="list-group-item-heading">{{recipe.name}}</h3>
-                <p class="list-group-item-text">{{recipe.description}}</p>
-            </div>
-            <span class="float-right">
-                <img src="{{recipe.imagePath}}" [src]="recipe.imagePath" alt="{{recipe.name}}" class="rounded-circle">
-            </span> 
-        </a>
+        <app-recipe-item *ngFor="let recipeitem of recipes" 
+                            [recipe]="recipeitem"
+                            (recipeSended)="OnReceiveRecipe($event)"></app-recipe-item>
     </div>
 </div>  
 
-<app-recipe-item></app-recipe-item>
 
