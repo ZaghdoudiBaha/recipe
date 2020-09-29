@@ -8,19 +8,19 @@
         <h3>{{recipe.name}}</h3>
     </div>
 </div>
+
+
 <div class="row">
     <div class="col-xs-12">
-        <div class="btn-group">
-            <button type="button" class="btn btn-primary dropdown-toggle">Manage recipe
-                <span class="caret">
-                    <ul class="dropdown-menu">
-                        <li><a href="#" >To Shoppin List</a></li>
-                        <li><a href="#" >Edit Recipe</a></li>
-                        <li><a href="#" >Delete Recipe</a></li>
-                    </ul>
+        <div class="btn-group" appDropDownDirective >
+            <button class="btn btn-primary dropdown-toggle open" type="button" data-toggle="dropdown" >Manage recipe
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item"><a href="#" >To Shoppin List</a></li>
+                <li class="dropdown-item"><a href="#" >Edit Recipe</a></li>
+                <li class="dropdown-item"><a href="#" >Delete Recipe</a></li>
+            </ul>
 
-                </span>
-        </button>
         </div>
     </div>
 </div>
@@ -34,4 +34,4 @@
         Ingredient
     </div>
 </div>
-        
+
