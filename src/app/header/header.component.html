@@ -1,17 +1,17 @@
 
  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Recipe book</a>
+    <a class="navbar-brand" >Recipe book</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#" (click)="onDisplay('Recipe')">Recipe</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink ="/recipes">Recipe</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" (click)="onDisplay('Shopping')">Shopping</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink ="/shopping-List">Shopping</a>
         </li>
       </ul>
 
@@ -20,21 +20,10 @@
           Manage
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Save data</a>
-          <a class="dropdown-item" href="#">Fetch data</a>
+          <a class="dropdown-item" style="cursor: pointer;">Save data</a>
+          <a class="dropdown-item" style="cursor: pointer;">Fetch data</a>
         </div>
       </div>
-
-
-      <!-- <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Manage</a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Save data</a></li>
-                <li><a href="#">Fetch data</a></li>
-            </ul>
-        </li>
-    </ul> -->
 
     </div>
   </nav>

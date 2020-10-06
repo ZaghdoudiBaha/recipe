@@ -1,8 +1,9 @@
-<button class="btn btn-success">New recipe</button>
+<button class="btn btn-success" (click)="toEditComponent()">New recipe</button>
 <div class="row">
     <div class="col-xs-12">
-        <app-recipe-item *ngFor="let recipeitem of recipes" 
-                            [recipe]="recipeitem"></app-recipe-item>
+        <app-recipe-item *ngFor="let recipeitem of recipes; let i = index" 
+                         [recipe]="recipeitem" 
+                         [id]="i"></app-recipe-item>
     </div>
 </div>  
 
