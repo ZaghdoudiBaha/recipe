@@ -6,11 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'cours-project';
-  pageDisplayed ='both'
 
-  ondisplayPage(page:{displayedPage : string}){
-    this.pageDisplayed = page.displayedPage;
-    
-  }
 }
