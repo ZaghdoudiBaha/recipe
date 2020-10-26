@@ -10,7 +10,7 @@ export class RecipeSerice{
 
     recipeSelected = new EventEmitter<Recipe>();
     
-    private recipes : Recipe[] = [new Recipe("Some food",
+/*     private recipes : Recipe[] = [new Recipe("Some food",
                         "this is a food",
                         "https://assets.bonappetit.com/photos/5d7296eec4af4d0008ad1263/3:2/w_1280,c_limit/Basically-Gojuchang-Chicken-Recipe-Wide.jpg",
                         [
@@ -27,7 +27,8 @@ export class RecipeSerice{
     [
         new Ingredient("kouskous",1),
         new Ingredient("Tomatoes",2)])  
-   ];
+   ]; */
+   private recipes : Recipe[] =[];
 
     constructor(private slService: ShoppingListService){
 
@@ -42,6 +43,7 @@ export class RecipeSerice{
 
     addIngredientsToShoppingList(ingredients : Ingredient[]){
         this.slService.addIngredients(ingredients);
+        
     }
     addRecipe(recipe : Recipe){
         this.recipes.push(recipe);
@@ -56,5 +58,10 @@ export class RecipeSerice{
     deleteRecipe(index:number){
         this.recipes.splice(index,1);
         this.recipeChanged.next(this.recipes.slice());
+    }
+
+    setRecipes(recipes : Recipe[]){
+        this.recipes = recipes;
+        this.recipeChanged.next(this.recipes.slice())
     }
 }
